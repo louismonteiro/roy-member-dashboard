@@ -1,0 +1,80 @@
+<?php
+
+error_reporting(E_ERROR);
+ini_set('display_errors', 1);
+$servername = '13.59.174.201';
+$username = 'admin_beta1';
+$password = 'vALA6T7Slc';
+$dbname = 'admin_beta1';
+
+
+
+$timestamp=strtotime("Last Saturday");
+$timestamp2=strtotime("+1439 minutes",strtotime("Last Friday"));
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+$getusers_sql = "SELECT * FROM subscribers";
+$getusers_query = mysqli_query($conn, $getusers_sql);
+$getusers = $getusers_query->fetch_all(MYSQLI_ASSOC);
+foreach ($getusers as $user)
+
+{
+
+    $getvisits_sql = "SELECT * FROM visitsbeta WHERE affiliate_id='" . $user['referral_id'] . "' AND reg_date BETWEEN '" . $timestamp . "' AND '" .$timestamp2 . "'";
+    $getvisits_query = mysqli_query($conn, $getvisits_sql);
+    $getvisits = $getvisits_query->fetch_all(MYSQLI_ASSOC);
+    $visitscount=0;
+    foreach ($getvisits as $visits)
+
+    {
+        $visitscount++;
+
+    }
+    echo '------';
+    echo '<br>';
+    echo $visitscount;
+    echo '<br>';
+
+
+
+
+
+
+    $getcomm_sql = "SELECT * FROM aff_commissionbeta WHERE aff_id='" . $user['referral_id'] . "' AND date BETWEEN '" . $timestamp . "' AND '" .$timestamp2 . "'";
+    $getcomm_query = mysqli_query($conn, $getcomm_sql);
+    $getcomm = $getcomm_query->fetch_all(MYSQLI_ASSOC);
+    $earnings=0;
+    $conversion=0;
+    foreach ($getcomm as $comm)
+
+    {
+        $conversion++;
+        $earnings=$earnings+$comm['profit'];
+
+    }
+    echo '<br>';
+    echo $earnings;
+    echo '<br>';
+    echo '------';
+
+    if ($earnings>0)
+    {
+        $addpayouts_sql="INSERT INTO payoutsbeta (member_id,amount,status,visitors,conversions,added_date) VALUE ('".$user['id']."', '" . $earnings . "','Pending','".$visitscount."','".($conversion/$visitscount*100)."', '" . time() . "')";
+        if (mysqli_query($conn, $addpayouts_sql)) {
+            echo 1;
+            echo '<br>';
+
+        } else {
+            echo "Error: " . $addpayouts_sql . "<br>" . mysqli_error($conn);
+        }
+
+    }
+
+}
+
+
+
+ 

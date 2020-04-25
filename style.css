@@ -1,0 +1,264 @@
+body
+{
+    background:white;
+
+}
+.chatroom
+{
+    border-radius:50%;background-color: pink;width: 35px;height: 35px;text-align: center;
+}
+.chatroom strong
+{
+    position: relative;top:5px;color: #675b64;
+    font-family: "Helvetica Neue", Helvetica, "Droid Sans", sans-serif;
+}
+
+#rec svg
+{
+    position: absolute;
+    max-height: 100px;
+    width: 100px;
+    padding-bottom: 12px;
+    margin-left: -7px;
+}
+#svghover:hover svg path,
+#svghover:hover{
+    fill: #55e4d4;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+#svghover:hover svg,
+#svghover:hover{
+    fill: #55e4d4;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+
+#Main svg:hover {
+
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+#Main svg {
+
+    position: relative;
+    top: 29px;
+    max-height: 50px;
+    width: 50px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+    margin-top: -111px;
+}
+.nav>li>a:hover {
+    background-color: transparent;
+    color: #55e4d4;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+#leftside>li>a:hover {
+    background-color: transparent;
+    color: #55e4d4;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+#leftside>li>a {
+    background-color: transparent;
+    color: #535353;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+#leftside>li>a>strong {
+    background-color: transparent;
+    color: #55e4d4;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+}
+.rectangle:hover {
+    fill: white;
+    border: solid 2px #292f3b;
+    cursor: pointer;
+    height: 100px;
+    width: 250px;
+    background-color: #292f3b;
+    border-radius: 16px;
+    color: white;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+
+
+}
+.rectangle:hover svg path,
+.rectangle:hover{
+    fill:white;
+
+
+}
+.rectangle:hover svg ,
+.rectangle:hover{
+    fill:white;
+
+
+}
+
+.rectangle h3
+{
+    padding-top: 52px;
+
+    padding-left: 22px;
+    font-size: 15px;
+}
+.rectangle i
+{
+    padding-left: 22px;
+    padding-top: 12px;
+    font-size: 40px;
+}
+
+.rectangle {
+    border: solid 2px #d0d4da;
+    cursor: pointer;
+    height: 100px;
+    width: 250px;
+    background-color: white;
+    border-radius: 16px;
+    color: #97abcd;
+    float: left;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+    position: relative;
+
+
+}
+#myDiv {
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg); /* Standard syntax */
+    background-image: linear-gradient(-340deg,#53eacb, #58d0ef);
+    position: absolute;
+    top: 852px;
+    right: -122px;
+    width: 1500px;
+    height: 1300px;
+
+
+}
+#myDiv2 {
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg); /* Standard syntax */
+    background-image: linear-gradient(-340deg,#53eacb, #53eacb);
+    position: absolute;
+    top: 833px;
+    right: -122px;
+    width: 1500px;
+    height: 1300px;
+
+
+}
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #23272d;
+    color: white;
+    max-height: 50px;
+}
+.dashboardtop
+{
+
+    position: relative;
+
+
+
+}
+.dashboardtopalarms
+
+{
+    font-size:19px;
+    padding-right: 20px;
+    color: #a4aac6;
+
+}
+.notificationred
+{
+    color: red;
+    position: relative;
+    top: -17px;
+    font-size: 40px;
+    right: 12px;
+    cursor: pointer;
+
+}
+.textarea-container {
+    position: relative;
+}
+.textarea-container textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.textarea-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* The container */
+.radiocontainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 22px;
+}
+
+/* Hide the browser's default radio button */
+.radiocontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 12px;
+    min-width: 12px;
+    max-width: 12px;
+    max-height: 12px;
+
+    background-color: white;;
+    float: left;
+    margin-right:22px;
+    margin-top: 5px;
+    border: solid 1px white;
+    outline: solid 1px #c7c7c7;
+}
+
+/* On mouse-over, add a grey background color */
+.radiocontainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radiocontainer input:checked ~ .checkmark {
+    background-color: #56dcdf;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
